@@ -4,6 +4,6 @@ type Transfers @entity {
   txHash: String
   fromAddress: String
   toAddress: String
-  amount: BigInt
+  amount: String
   denomination: String
 }
