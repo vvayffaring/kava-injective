@@ -10,6 +10,7 @@ export async function handleEvent(event: CosmosEvent): Promise<void> {
  newTransfers.txHash = event.tx.hash;
  newTransfers.fromAddress = event.msg.msg.decodedMsg.fromAddress;
  newTransfers.toAddress = event.msg.msg.decodedMsg.toAddress;
-
+ newTransfers.amount = event.msg.msg.decodedMsg.amount;
+  
  await newTransfers.save();
 }
