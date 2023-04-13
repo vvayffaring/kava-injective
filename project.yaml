@@ -27,7 +27,7 @@ network:
         - MsgSend
 dataSources:
   - kind: cosmos/Runtime
-    startBlock: 3468552
+    startBlock: 3871667
     mapping:
       file: ./dist/index.js
       handlers:
@@ -39,6 +39,6 @@ dataSources:
         - handler: handleEvent
           kind: cosmos/EventHandler
           filter:
-            type: coin_spent
+            type: coin_receive
             messageFilter:
               type: /cosmos.bank.v1beta1.MsgSend
